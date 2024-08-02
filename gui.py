@@ -11,25 +11,24 @@ from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage
 
 
 OUTPUT_PATH = Path(__file__).parent
-ASSETS_PATH = OUTPUT_PATH / Path(r"C:\Users\anura\Desktop\Programming\programs\DBMS project\TkinterDesignerTest\build\assets\frame0")
+ASSETS_PATH = OUTPUT_PATH / Path(r"C:\Users\anura\Desktop\Programming\programs\DBMS project\ResV1\build\assets\frame0")
 
 
 def relative_to_assets(path: str) -> Path:
     return ASSETS_PATH / Path(path)
 
-custom_font = ("Helvetica", 30, "bold italic") 
 
 window = Tk()
 
-window.geometry("1366x720")
+window.geometry("763x500")
 window.configure(bg = "#FFFFFF")
 
 
 canvas = Canvas(
     window,
     bg = "#FFFFFF",
-    height = 720,
-    width = 1366,
+    height = 500,
+    width = 763,
     bd = 0,
     highlightthickness = 0,
     relief = "ridge"
@@ -39,127 +38,81 @@ canvas.place(x = 0, y = 0)
 image_image_1 = PhotoImage(
     file=relative_to_assets("image_1.png"))
 image_1 = canvas.create_image(
-    246.0,
-    360.0,
+    381.0,
+    250.0,
     image=image_image_1
-)
-
-canvas.create_rectangle(
-    603.0,
-    277.0,
-    1238.0,
-    390.0,
-    fill="#D9D9D9",
-    outline="")
-
-canvas.create_rectangle(
-    603.0,
-    471.0,
-    1238.0,
-    584.0,
-    fill="#D9D9D9",
-    outline="")
-
-image_image_2 = PhotoImage(
-    file=relative_to_assets("image_2.png"))
-image_2 = canvas.create_image(
-    696.0,
-    527.0,
-    image=image_image_2
-)
-
-image_image_3 = PhotoImage(
-    file=relative_to_assets("image_3.png"))
-image_3 = canvas.create_image(
-    943.0,
-    134.0,
-    image=image_image_3
-)
-
-image_image_4 = PhotoImage(
-    file=relative_to_assets("image_4.png"))
-image_4 = canvas.create_image(
-    973.0,
-    134.0,
-    image=image_image_4
-)
-
-image_image_5 = PhotoImage(
-    file=relative_to_assets("image_5.png"))
-image_5 = canvas.create_image(
-    679.0,
-    333.0,
-    image=image_image_5
-)
-
-entry_image_1 = PhotoImage(
-    file=relative_to_assets("entry_1.png"))
-entry_bg_1 = canvas.create_image(
-    1020.0,
-    333.5,
-    image=entry_image_1
-)
-entry_1 = Entry(
-    bd=0,
-    bg="#F4F4F4",
-    fg="#000716",
-    highlightthickness=0,
-    font = custom_font,
-)
-entry_1.place(
-    x=820.0,
-    y=277.0,
-    width=436.0,
-    height=111.0
-)
-
-entry_image_2 = PhotoImage(
-    file=relative_to_assets("entry_2.png"))
-entry_bg_2 = canvas.create_image(
-    1020.0,
-    527.5,
-    image=entry_image_2
-)
-entry_2 = Entry(
-    bd=0,
-    bg="#F4F4F4",
-    fg="#000716",
-    highlightthickness=0,
-    font =custom_font
-)
-entry_2.place(
-    x=820.0,
-    y=471.0,
-    width=436.0,
-    height=111.0
 )
 
 button_image_1 = PhotoImage(
     file=relative_to_assets("button_1.png"))
-button_image_hover_1 = PhotoImage(
-    file=relative_to_assets("button_hover_1.png"))
-
 button_1 = Button(
-    image=button_image_hover_1,
+    image=button_image_1,
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_1 clicked"),
     relief="flat"
 )
 button_1.place(
-    x=719.6795654296875,
-    y=623.0,
-    width=496.3204040527344,
-    height=86.0
+    x=492.0,
+    y=340.0,
+    width=203.0,
+    height=41.0
 )
-def on_enter(e):
-    button_1.config(image=button_image_1)
 
-def on_leave(e):
-    button_1.config(image=button_image_hover_1)
+button_image_2 = PhotoImage(
+    file=relative_to_assets("button_2.png"))
+button_2 = Button(
+    image=button_image_2,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: print("button_2 clicked"),
+    relief="flat"
+)
+button_2.place(
+    x=492.0,
+    y=283.0,
+    width=203.0,
+    height=41.0
+)
 
-button_1.bind("<Enter>", on_enter)
-button_1.bind("<Leave>", on_leave)
+button_image_3 = PhotoImage(
+    file=relative_to_assets("button_3.png"))
+button_3 = Button(
+    image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: print("button_3 clicked"),
+    relief="flat"
+)
+button_3.place(
+    x=492.0,
+    y=402.0,
+    width=203.0,
+    height=41.0
+)
 
-window.resizable(True, True)
+image_image_2 = PhotoImage(
+    file=relative_to_assets("image_2.png"))
+image_2 = canvas.create_image(
+    219.0,
+    250.0,
+    image=image_image_2
+)
+
+button_image_4 = PhotoImage(
+    file=relative_to_assets("button_4.png"))
+button_4 = Button(
+    image=button_image_4,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: print("button_4 clicked"),
+    relief="flat"
+)
+button_4.place(
+    x=0.0,
+    y=0.0,
+    width=90.0,
+    height=89.0
+)
+window.resizable(False, False)
 window.mainloop()
